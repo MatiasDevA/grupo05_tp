@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="BLL_FERRETERIA/BLL_FERRETERIA.csproj" />
+  <Project Path="DAL_FERRETERIA/DAL_FERRETERIA.csproj" />
+  <Project Path="ENTIDADES.FERRETERIA/ENTIDADES.FERRETERIA.csproj" />
+  <Project Path="UI_FERRETERIA/UI_FERRETERIA.csproj" />
+</Solution>
