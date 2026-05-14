@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3F97A28B-DE9F-4897-81C3-25980002B2C1}</ProjectGuid>
+    <ProjectGuid>{4DE55947-EAF5-BCB7-1496-DBAC916581AF}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>UI_FERRETERIA</RootNamespace>
     <AssemblyName>UI_FERRETERIA</AssemblyName>

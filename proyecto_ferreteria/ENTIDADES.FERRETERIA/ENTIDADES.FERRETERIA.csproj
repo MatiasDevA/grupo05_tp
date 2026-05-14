@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F2E03C15-1E9A-4746-8AD8-515B3B7A9CCB}</ProjectGuid>
+    <ProjectGuid>{F5CDA7D5-5D84-144B-7A57-A0A7C4C69274}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ENTIDADES.FERRETERIA</RootNamespace>
