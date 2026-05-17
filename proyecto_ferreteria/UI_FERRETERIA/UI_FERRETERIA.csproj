@@ -52,24 +52,30 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormAdmin.cs" />
+    <Compile Include="FormAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormAdmin.Designer.cs">
       <DependentUpon>FormAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormCliente.cs" />
+    <Compile Include="FormCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormCliente.Designer.cs">
       <DependentUpon>FormCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormGerente.cs" />
+    <Compile Include="FormGerente.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormGerente.Designer.cs">
       <DependentUpon>FormGerente.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormVendedor.cs" />
+    <Compile Include="FormVendedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormVendedor.Designer.cs">
       <DependentUpon>FormVendedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
-    <Compile Include="obj\Release\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
