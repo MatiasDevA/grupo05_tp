@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DB4C15D9-9864-5EFB-32BE-90601F86F78E}</ProjectGuid>
+    <ProjectGuid>{3C580A86-8930-40C9-AE40-AAD8009A6779}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DAL_FERRETERIA</RootNamespace>
