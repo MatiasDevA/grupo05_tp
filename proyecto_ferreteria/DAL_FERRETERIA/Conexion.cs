@@ -9,13 +9,27 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
 
-namespace DAL
+namespace DAL_FERRETERIA
 {
     public class Conexion
     {
         private SqlConnection objConexion;
         private string strCadenaDeConexion = "";
+        private static Conexion _instance;
 
+
+        private Conexion()
+        {
+        }
+
+        public static Conexion GetInstance()
+        {
+            if (_instance == null)
+            {
+                _instance = new Conexion();
+            }
+            return _instance;
+        }
 
         /* -------------------- private void Conectar() ------------ 
          * Este metodo como indica su nombre... me permite conectarme con la 

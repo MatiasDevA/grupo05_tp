@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DAL_FERRETERIA;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +9,6 @@ namespace BLL_FERRETERIA
 {
     public class Class1
     {
+      
     }
 }
