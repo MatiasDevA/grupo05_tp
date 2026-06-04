@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace UI_FERRETERIA
 {
-    public partial class Form1 : Form
+    public partial class Login : Form
     {
-        public Form1()
+        public Login()
         {
             InitializeComponent();
         }
@@ -35,18 +35,29 @@ namespace UI_FERRETERIA
 
         private void btnVendedor_Click(object sender, EventArgs e)
         {
-            using (var form = new FormVendedor())
+            this.Hide();
+            using (var form = new GestionClientes())
             {
                 form.ShowDialog(this);
+                
             }
+            this.Close();
         }
 
         private void btnCliente_Click(object sender, EventArgs e)
         {
-            using (var form = new FormCliente())
-            {
-                form.ShowDialog(this);
-            }
+            GestionClientes form = new GestionClientes();
+
+            form.FormClosed += (s, args) => this.Close();
+
+            this.Hide();
+
+            form.Show();
         }
-}
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
