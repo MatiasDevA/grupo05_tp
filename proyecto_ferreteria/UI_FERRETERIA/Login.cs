@@ -39,9 +39,17 @@ namespace UI_FERRETERIA
             using (var form = new GestionClientes())
             {
                 form.ShowDialog(this);
-                
+
             }
             this.Close();
+        }
+
+        private void btnEncargado_Click(object sender, EventArgs e)
+        {
+            using (var form = new FormEncargadoDeposito())
+            {
+                form.ShowDialog(this);
+            }
         }
 
         private void btnCliente_Click(object sender, EventArgs e)
