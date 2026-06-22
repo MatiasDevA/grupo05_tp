@@ -1,5 +1,8 @@
-﻿using System;
+﻿using DAL_FERRETERIA;
+using ENTIDADES.FERRETERIA;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,61 +11,58 @@ namespace BLL_FERRETERIA
 {
     public class ClienteNegocio
     {
-
-
-		private int _idcliente;
-
-		public int IdCliente
+        public bool CrearCliente(ENTIDADES.FERRETERIA.ClienteBE ClienteEntidad)
         {
-			get { return _idcliente; }
-			set { _idcliente = value; }
-		}
+            DAL_FERRETERIA.ClienteDatos clienteDal = new ClienteDatos();
+            return clienteDal.CrearCliente(ClienteEntidad);
+
+        }
+
+        public List <ClienteBE> ListarClientes()
+        {
+            ClienteDatos clienteDal = new ClienteDatos();
+            return clienteDal.ListarClientes();
+        }
+    
+      
+        public List<ClienteBE> BuscarClientes(string criterio, string valor)
+        {
+
+            ClienteDatos clienteDal = new ClienteDatos();
+            switch (criterio)
+            {
+                case "ID": 
+                    return clienteDal.BuscarPorId(valor);
+
+                case "DNI":
+                    return clienteDal.BuscarPorDNI(valor);
+
+                case "CUIL":
+                    return clienteDal.BuscarPorCuil(valor);
+
+                case "RAZON SOCIAL":
+                    return clienteDal.BuscarPorRazonSocial(valor);
+                default:
+                    throw new Exception("Criterio de búsqueda inválido.");
+            }
+        }
+
+        public ClienteBE BuscarClientes(int valor)
+        {
+
+            ClienteDatos clienteDal = new ClienteDatos();
+            
+            return clienteDal.BuscarPorId(valor);
+         }
 
 
-		private string _telefono;
+        public bool ModificarCliente(ClienteBE clientemodificado)
+        {
 
-		public string Telefono
-		{
-			get { return _telefono; }
-			set { _telefono = value; }
-		}
+            ClienteDatos clienteDal = new ClienteDatos();
 
+            return clienteDal.ModificarCliente(clientemodificado);
 
-		private string _razonsocial;
-
-		public string RazonSocial
-		{
-			get { return _razonsocial; }
-			set { _razonsocial = value; }
-		}
-
-		private string _cuil;
-
-		public string CUIL
-		{
-			get { return _cuil; }
-			set { _cuil = value; }
-		}
-
-
-		private string _direccion;
-
-		public string Direccion
-		{
-			get { return _direccion; }
-			set { _direccion = value; }
-		}
-
-		
-		
-
-        //Hack revisar esto 1
-        /*public void CargarCliente()
-		{
-			DAL_FERRETERIA.ClienteDatos ClienteDatos = new DAL_FERRETERIA.ClienteDatos();
-
-			ClienteDatos.
-
-		}*/
-	}
+        }
+    }
 }

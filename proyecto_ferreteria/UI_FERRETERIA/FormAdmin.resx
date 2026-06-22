@@ -117,36 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnVolver.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DAAACwwBP0AiyAAAAHxJREFUOE/Fk0EKgCAQRdu36zwF0cmCpIN0u25QqxcDLnIcaSKht5I/34eUNk0N
-        gBU48SG9oAUSdklYQHrAoUOS4IGsnwUGwAaMcT3roUfQAzsw6ZlLIBQlWpB8cxuRtEVBCfcJLIDB3ByH
-        HsG3v3An69e4ieHlW1gSwa9clvMShBsSBsYAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="btnNuevoCliente.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DAAACwwBP0AiyAAAACZJREFUOE9jYKAV+I8G0OUJgpFmALpiYsFwMgAbIEkxNjBqAPEAACWXfpDOBl9F
-        AAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="btnModificar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DAAACwwBP0AiyAAAAIpJREFUOE/FzLENwjAURVEvwFpQZoaINRKRBRB9shpigyg11UWW7Oj7OTGxKDiV
-        Zb37nasAXIEXsAATcNLNLqAnN+puF9AAbzkw6y4DnM1bjzzTtQCGMLybP3ukTQvDxJEe6dLC2Iijh24z
-        hTi6aLM6EN+0Wf0v9nQtyrGnhfE99rQKjsWellXxrz5Bg5V4dAwo6AAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="btnEliminar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DAAACwwBP0AiyAAAAHVJREFUOE/FjsENQFAUBN24/i440wpqoRZqoRbqkJWXiDCSFxFizrOTjaIvkFTp
-        Sklvh+Zd3gv8j6SM926QHgOxpIWGg7kJX8y0HKbTeAuMtBwG7i3Q03LouLdAS8uh4d4CNS2HinsLFLQc
-        cu4tEGg5BO4fswJqxTmYiF3HygAAAABJRU5ErkJggg==
-</value>
-  </data>
 </root>

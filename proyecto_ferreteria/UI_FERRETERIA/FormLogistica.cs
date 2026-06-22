@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace UI_FERRETERIA
 {
-    public partial class FormCliente : Form
+    public partial class FormLogistica : Form
     {
-        public FormCliente()
+        public FormLogistica()
         {
             InitializeComponent();
             this.Text = "Pantalla Cliente";

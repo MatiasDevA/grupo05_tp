@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL_FERRETERIA;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,46 +18,43 @@ namespace UI_FERRETERIA
             InitializeComponent();
         }
 
-        private void btnAdmin_Click(object sender, EventArgs e)
+        private void lblIniciarSesion_Click(object sender, EventArgs e)
         {
-            using (var form = new FormAdmin())
+            string usuario = txtUsuario.Text; //Hack Usuario
+            string clave = txtContrasena.Text;
+
+            Autenticador auth = new Autenticador();// instancion un objeto de negocio
+            Rol rol = auth.Validar(usuario, clave); //valido los datos
+
+            //HACK esta harcodeado tiene que ser con facthory methode
+            if (rol == Rol.Gerente)
             {
-                form.ShowDialog(this);
+                FormGerente frm = new FormGerente();
+                frm.Show();
+                this.Hide();
             }
-        }
-
-        private void btnGerente_Click(object sender, EventArgs e)
-        {
-            using (var form = new FormGerente())
+            else if (rol == Rol.Vendedor)
             {
-                form.ShowDialog(this);
+                MenuVendedor frm = new MenuVendedor(this);
+                frm.Show();
+                this.Hide();
             }
-        }
-
-        private void btnVendedor_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            using (var form = new GestionClientes())
+            else if (rol == Rol.Logistica)
             {
-                form.ShowDialog(this);
-                
+                FormLogistica frm = new FormLogistica();
+                frm.Show();
+                this.Hide();
             }
-            this.Close();
-        }
-
-        private void btnCliente_Click(object sender, EventArgs e)
-        {
-            GestionClientes form = new GestionClientes();
-
-            form.FormClosed += (s, args) => this.Close();
-
-            this.Hide();
-
-            form.Show();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
+            else if (rol == Rol.Sistema)
+            {
+                FormAdmin frm = new FormAdmin();
+                frm.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Usuario o contraseña incorrectos");
+            }
 
         }
     }

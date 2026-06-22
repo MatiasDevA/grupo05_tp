@@ -1,6 +1,6 @@
 ﻿namespace UI_FERRETERIA
 {
-    partial class FormCliente
+    partial class FormLogistica
     {
         /// <summary>
         /// Required designer variable.

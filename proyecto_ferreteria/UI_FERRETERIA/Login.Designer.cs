@@ -28,89 +28,111 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnAdmin = new System.Windows.Forms.Button();
-            this.btnGerente = new System.Windows.Forms.Button();
-            this.btnVendedor = new System.Windows.Forms.Button();
-            this.btnCliente = new System.Windows.Forms.Button();
             this.PnlLogin = new System.Windows.Forms.Panel();
+            this.PIconoInisio = new System.Windows.Forms.PictureBox();
+            this.lblIniciarSesion = new System.Windows.Forms.Button();
+            this.txtContrasena = new System.Windows.Forms.TextBox();
+            this.lblContraseña = new System.Windows.Forms.Label();
+            this.lblUusario = new System.Windows.Forms.Label();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
             this.PnlLogin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PIconoInisio)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnAdmin
-            // 
-            this.btnAdmin.Location = new System.Drawing.Point(491, 386);
-            this.btnAdmin.Name = "btnAdmin";
-            this.btnAdmin.Size = new System.Drawing.Size(78, 20);
-            this.btnAdmin.TabIndex = 0;
-            this.btnAdmin.Text = "Admin";
-            this.btnAdmin.UseVisualStyleBackColor = true;
-            this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click);
-            // 
-            // btnGerente
-            // 
-            this.btnGerente.Location = new System.Drawing.Point(491, 356);
-            this.btnGerente.Name = "btnGerente";
-            this.btnGerente.Size = new System.Drawing.Size(78, 24);
-            this.btnGerente.TabIndex = 1;
-            this.btnGerente.Text = "Gerente";
-            this.btnGerente.UseVisualStyleBackColor = true;
-            this.btnGerente.Click += new System.EventHandler(this.btnGerente_Click);
-            // 
-            // btnVendedor
-            // 
-            this.btnVendedor.Location = new System.Drawing.Point(143, 239);
-            this.btnVendedor.Name = "btnVendedor";
-            this.btnVendedor.Size = new System.Drawing.Size(78, 25);
-            this.btnVendedor.TabIndex = 2;
-            this.btnVendedor.Text = "Vendedor";
-            this.btnVendedor.UseVisualStyleBackColor = true;
-            this.btnVendedor.Click += new System.EventHandler(this.btnVendedor_Click);
-            // 
-            // btnCliente
-            // 
-            this.btnCliente.Location = new System.Drawing.Point(491, 417);
-            this.btnCliente.Name = "btnCliente";
-            this.btnCliente.Size = new System.Drawing.Size(78, 21);
-            this.btnCliente.TabIndex = 3;
-            this.btnCliente.Text = "Cliente";
-            this.btnCliente.UseVisualStyleBackColor = true;
-            this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
             // 
             // PnlLogin
             // 
             this.PnlLogin.BackColor = System.Drawing.Color.White;
             this.PnlLogin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PnlLogin.Controls.Add(this.btnVendedor);
+            this.PnlLogin.Controls.Add(this.PIconoInisio);
+            this.PnlLogin.Controls.Add(this.lblIniciarSesion);
+            this.PnlLogin.Controls.Add(this.txtContrasena);
+            this.PnlLogin.Controls.Add(this.lblContraseña);
+            this.PnlLogin.Controls.Add(this.lblUusario);
+            this.PnlLogin.Controls.Add(this.txtUsuario);
             this.PnlLogin.Location = new System.Drawing.Point(115, 64);
             this.PnlLogin.Name = "PnlLogin";
-            this.PnlLogin.Size = new System.Drawing.Size(350, 307);
+            this.PnlLogin.Size = new System.Drawing.Size(322, 307);
             this.PnlLogin.TabIndex = 4;
+            // 
+            // PIconoInisio
+            // 
+            this.PIconoInisio.Location = new System.Drawing.Point(96, 27);
+            this.PIconoInisio.Name = "PIconoInisio";
+            this.PIconoInisio.Size = new System.Drawing.Size(124, 63);
+            this.PIconoInisio.TabIndex = 9;
+            this.PIconoInisio.TabStop = false;
+            // 
+            // lblIniciarSesion
+            // 
+            this.lblIniciarSesion.BackColor = System.Drawing.Color.Silver;
+            this.lblIniciarSesion.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIniciarSesion.Location = new System.Drawing.Point(107, 254);
+            this.lblIniciarSesion.Name = "lblIniciarSesion";
+            this.lblIniciarSesion.Size = new System.Drawing.Size(87, 33);
+            this.lblIniciarSesion.TabIndex = 8;
+            this.lblIniciarSesion.Text = "iniciar sesion";
+            this.lblIniciarSesion.UseVisualStyleBackColor = false;
+            this.lblIniciarSesion.Click += new System.EventHandler(this.lblIniciarSesion_Click);
+            // 
+            // txtContrasena
+            // 
+            this.txtContrasena.Location = new System.Drawing.Point(162, 179);
+            this.txtContrasena.Name = "txtContrasena";
+            this.txtContrasena.PasswordChar = '*';
+            this.txtContrasena.Size = new System.Drawing.Size(100, 20);
+            this.txtContrasena.TabIndex = 7;
+            // 
+            // lblContraseña
+            // 
+            this.lblContraseña.AutoSize = true;
+            this.lblContraseña.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContraseña.Location = new System.Drawing.Point(31, 179);
+            this.lblContraseña.Name = "lblContraseña";
+            this.lblContraseña.Size = new System.Drawing.Size(92, 21);
+            this.lblContraseña.TabIndex = 6;
+            this.lblContraseña.Text = "Contraseña";
+            // 
+            // lblUusario
+            // 
+            this.lblUusario.AutoSize = true;
+            this.lblUusario.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUusario.Location = new System.Drawing.Point(31, 143);
+            this.lblUusario.Name = "lblUusario";
+            this.lblUusario.Size = new System.Drawing.Size(65, 21);
+            this.lblUusario.TabIndex = 5;
+            this.lblUusario.Text = "Usuario";
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.Location = new System.Drawing.Point(162, 144);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(100, 20);
+            this.txtUsuario.TabIndex = 3;
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(71)))));
-            this.ClientSize = new System.Drawing.Size(598, 450);
+            this.ClientSize = new System.Drawing.Size(540, 450);
             this.Controls.Add(this.PnlLogin);
-            this.Controls.Add(this.btnCliente);
-            this.Controls.Add(this.btnGerente);
-            this.Controls.Add(this.btnAdmin);
             this.Name = "Login";
             this.Text = "Pantalla Principal";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.PnlLogin.ResumeLayout(false);
+            this.PnlLogin.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PIconoInisio)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnAdmin;
-        private System.Windows.Forms.Button btnGerente;
-        private System.Windows.Forms.Button btnVendedor;
-        private System.Windows.Forms.Button btnCliente;
         private System.Windows.Forms.Panel PnlLogin;
+        private System.Windows.Forms.Button lblIniciarSesion;
+        private System.Windows.Forms.TextBox txtContrasena;
+        private System.Windows.Forms.Label lblContraseña;
+        private System.Windows.Forms.Label lblUusario;
+        private System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.PictureBox PIconoInisio;
     }
 }
 
