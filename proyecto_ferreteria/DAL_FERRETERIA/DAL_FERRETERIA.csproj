@@ -46,9 +46,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BLL_FERRETERIA\BLL_FERRETERIA.csproj">
-      <Project>{f81471af-b6bd-4897-b061-4e117f25cf9b}</Project>
-      <Name>BLL_FERRETERIA</Name>
+    <ProjectReference Include="..\ENTIDADES.FERRETERIA\ENTIDADES.FERRETERIA.csproj">
+      <Project>{f2e03c15-1e9a-4746-8ad8-515b3b7a9ccb}</Project>
+      <Name>ENTIDADES.FERRETERIA</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

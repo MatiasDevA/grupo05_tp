@@ -54,6 +54,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestCrearUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestCrearUsuario.Designer.cs">
+      <DependentUpon>TestCrearUsuario.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -63,6 +72,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TestCrearUsuario.resx">
+      <DependentUpon>TestCrearUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -80,6 +92,10 @@
     <ProjectReference Include="..\BLL_FERRETERIA\BLL_FERRETERIA.csproj">
       <Project>{f81471af-b6bd-4897-b061-4e117f25cf9b}</Project>
       <Name>BLL_FERRETERIA</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ENTIDADES.FERRETERIA\ENTIDADES.FERRETERIA.csproj">
+      <Project>{f2e03c15-1e9a-4746-8ad8-515b3b7a9ccb}</Project>
+      <Name>ENTIDADES.FERRETERIA</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

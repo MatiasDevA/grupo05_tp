@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5FB872E2-3AF8-BDF4-A563-0C7018C08066}</ProjectGuid>
+    <ProjectGuid>{F81471AF-B6BD-4897-B061-4E117F25CF9B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BLL_FERRETERIA</RootNamespace>
@@ -43,6 +43,20 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UsuarioFactory.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAL_FERRETERIA\DAL_FERRETERIA.csproj">
+      <Project>{db4c15d9-9864-5efb-32be-90601f86f78e}</Project>
+      <Name>DAL_FERRETERIA</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ENTIDADES.FERRETERIA\ENTIDADES.FERRETERIA.csproj">
+      <Project>{f2e03c15-1e9a-4746-8ad8-515b3b7a9ccb}</Project>
+      <Name>ENTIDADES.FERRETERIA</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

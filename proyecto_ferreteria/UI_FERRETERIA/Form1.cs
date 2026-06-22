@@ -16,5 +16,11 @@ namespace UI_FERRETERIA
         {
             InitializeComponent();
         }
+
+        private void btnAltaUsuariosFrm_Click(object sender, EventArgs e)
+        {
+            TestCrearUsuario frmTest = new TestCrearUsuario();
+            frmTest.ShowDialog();   
+        }
     }
 }

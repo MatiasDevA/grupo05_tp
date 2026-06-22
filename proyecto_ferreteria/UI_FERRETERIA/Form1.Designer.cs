@@ -28,13 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.btnAltaUsuariosFrm = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // btnAltaUsuariosFrm
+            // 
+            this.btnAltaUsuariosFrm.Location = new System.Drawing.Point(12, 12);
+            this.btnAltaUsuariosFrm.Name = "btnAltaUsuariosFrm";
+            this.btnAltaUsuariosFrm.Size = new System.Drawing.Size(159, 59);
+            this.btnAltaUsuariosFrm.TabIndex = 0;
+            this.btnAltaUsuariosFrm.Text = "AltaUsuarios";
+            this.btnAltaUsuariosFrm.UseVisualStyleBackColor = true;
+            this.btnAltaUsuariosFrm.Click += new System.EventHandler(this.btnAltaUsuariosFrm_Click);
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnAltaUsuariosFrm);
+            this.Name = "Form1";
             this.Text = "Form1";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btnAltaUsuariosFrm;
     }
 }
 
