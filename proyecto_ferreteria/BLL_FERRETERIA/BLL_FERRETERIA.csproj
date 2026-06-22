@@ -41,14 +41,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminNegocio.cs" />
     <Compile Include="ClienteNegocio.cs" />
-    <Compile Include="EncargadoDepositoNegocio.cs" />
+    <Compile Include="LoginNegocio.cs" />
+    <Compile Include="OrdenCompraService.cs" />
+    <Compile Include="ProductoService.cs" />
+    <Compile Include="ProveedorService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL_FERRETERIA\DAL_FERRETERIA.csproj">
       <Project>{3c580a86-8930-40c9-ae40-aad8009a6779}</Project>
       <Name>DAL_FERRETERIA</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ENTIDADES.FERRETERIA\ENTIDADES.FERRETERIA.csproj">
+      <Project>{f2e03c15-1e9a-4746-8ad8-515b3b7a9ccb}</Project>
+      <Name>ENTIDADES.FERRETERIA</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

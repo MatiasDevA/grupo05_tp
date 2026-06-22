@@ -42,11 +42,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AlertaStockBE.cs" />
+    <Compile Include="CategoriaBE.cs" />
     <Compile Include="ClienteBE.cs" />
     <Compile Include="DetalleCompraBE.cs" />
+    <Compile Include="EstadoOrdenBE.cs" />
+    <Compile Include="HistorialOrdenBE.cs" />
+    <Compile Include="ItemOrdenBE.cs" />
+    <Compile Include="ListadoProductoBE.cs" />
     <Compile Include="OrdenCompraBE.cs" />
     <Compile Include="OrdenCompraDetalleBE.cs" />
     <Compile Include="ProductoBE.cs" />
+    <Compile Include="ProveedorBE.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
