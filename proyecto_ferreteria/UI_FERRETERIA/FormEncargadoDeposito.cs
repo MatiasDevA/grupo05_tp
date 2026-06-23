@@ -182,9 +182,11 @@ namespace UI_FERRETERIA
                 int cantidad = int.Parse(txtCantidad.Text);
                 decimal precioUnitario = decimal.Parse(txtPrecioUnitario.Text);
 
-                List<ItemOrdenBE> items = _ordenService.AgregarDetalleOrden(idOrden, idProducto, cantidad, precioUnitario);
+                _ordenService.AgregarDetalleOrden(idOrden, idProducto, cantidad, precioUnitario);
                 MessageBox.Show("Detalle agregado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                dgvItemsOrden.DataSource = items;
+
+                List<ItemOrdenBE> itemsActualizados = _ordenService.ObtenerItemsOrden(idOrden);
+                dgvItemsOrden.DataSource = itemsActualizados.Count > 0 ? itemsActualizados : null;
                 LimpiarDetalles();
             }
             catch (Exception ex)

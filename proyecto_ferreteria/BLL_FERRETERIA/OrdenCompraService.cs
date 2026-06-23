@@ -175,9 +175,11 @@ namespace BLL_FERRETERIA
             {
                 lista.Add(new ItemOrdenBE
                 {
-                    IdOrden = SafeInt(row, "id_orden"),
+                    IdDetalle = SafeInt(row, "id_detalle"),
                     IdProducto = SafeInt(row, "id_producto"),
-                    DescripcionProducto = SafeString(row, "descripcion_producto"),
+                    Codigo = SafeString(row, "codigo"),
+                    DescripcionProducto = SafeString(row, "descripcion"),
+                    Categoria = SafeString(row, "categoria"),
                     Cantidad = SafeInt(row, "cantidad"),
                     PrecioUnitario = SafeDecimal(row, "precio_unitario"),
                     Subtotal = SafeDecimal(row, "subtotal")
