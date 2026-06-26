@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
 
-namespace DAL
+namespace DAL_FERRETERIA
 {
     public class Conexion
     {
@@ -24,7 +24,7 @@ namespace DAL
          */
         private void Conectar()
         {   // HACK: Cadena de conexión hardcodeada. Luego ponerla como parametro de configuración del proyecto u otra alternativa.
-            strCadenaDeConexion = @"Integrated Security = SSPI; Persist Security Info = False; Initial Catalog = CursosBBDD; Data Source = localhost\SQLEXPRESS";
+            strCadenaDeConexion = @"Data Source=DESKTOP-5PDI69E\SQLEXPRESS01;Initial Catalog=FerreteriaIndustrial;Integrated Security=True";
 
             //Instanció un objeto del tipo SqlConnection
             objConexion = new SqlConnection();
@@ -189,17 +189,13 @@ namespace DAL
                 objComando.CommandType = CommandType.StoredProcedure;
                 objComando.Connection = this.objConexion;
 
-                if (pParametrosSql.Length > 0)
+                if (pParametrosSql != null && pParametrosSql.Length > 0)
                 {
                     objComando.Parameters.AddRange(pParametrosSql);
-                    //El método ExecuteNonQuery() me devuelve la cantidad de filas afectadas.
-                    filasAfectadas = objComando.ExecuteNonQuery();
                 }
-                else
-                {
-                    //retorno -1 porque la lista de parametros Sql tiene 0 ítems...
-                    filasAfectadas = -1;
-                }
+
+                //El método ExecuteNonQuery() me devuelve la cantidad de filas afectadas.
+                filasAfectadas = objComando.ExecuteNonQuery();
 
 
 
@@ -247,6 +243,19 @@ namespace DAL
         }
 
 
+        public SqlParameter crearParametro(string pNombre, decimal pValor)
+        {
+
+            SqlParameter objParametro = new SqlParameter();
+
+            objParametro.ParameterName = pNombre;
+            objParametro.Value = pValor;
+            objParametro.DbType = DbType.Decimal;
+
+            return objParametro;
+        }
+
+
         public SqlParameter crearParametro(string pNombre, DateTime pValor)
         {
 
@@ -281,6 +290,16 @@ namespace DAL
             objParametro.ParameterName = pNombre;
             objParametro.Value = pValor;
             objParametro.DbType = DbType.Boolean;
+
+            return objParametro;
+        }
+
+        public SqlParameter crearParametro(string pNombre, object pValor)
+        {
+            SqlParameter objParametro = new SqlParameter();
+
+            objParametro.ParameterName = pNombre;
+            objParametro.Value = pValor ?? DBNull.Value;
 
             return objParametro;
         }
