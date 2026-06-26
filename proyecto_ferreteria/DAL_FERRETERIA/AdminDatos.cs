@@ -60,7 +60,7 @@ namespace DAL_FERRETERIA
             });
         }
 
-        public DataTable ListarUsuarios(int? idPerfil = null, string estado = null)
+        public DataTable ListarUsuarios(int? idPerfil = null, string estado = null, string textoBusqueda = null)
         {
             var parametros = new List<SqlParameter>();
 
@@ -69,6 +69,9 @@ namespace DAL_FERRETERIA
 
             if (!string.IsNullOrWhiteSpace(estado))
                 parametros.Add(_conexion.crearParametro("@estado", estado));
+
+            if (!string.IsNullOrWhiteSpace(textoBusqueda))
+                parametros.Add(_conexion.crearParametro("@texto_busqueda", textoBusqueda));
 
             return _conexion.LeerPorStoreProcedure("SP_Admin_ListarUsuarios",
                 parametros.Count > 0 ? parametros.ToArray() : null);
@@ -85,6 +88,20 @@ namespace DAL_FERRETERIA
             {
                 _conexion.crearParametro("@id_usuario", idUsuario)
             });
+        }
+
+        public DataTable ModificarUsuarioClave(int idUsuario, string usuario, string clave)
+        {
+            var parametros = new List<SqlParameter>
+            {
+                _conexion.crearParametro("@id_usuario", idUsuario),
+                _conexion.crearParametro("@usuario", usuario)
+            };
+
+            if (!string.IsNullOrWhiteSpace(clave))
+                parametros.Add(_conexion.crearParametro("@clave", clave));
+
+            return _conexion.LeerPorStoreProcedure("SP_Admin_ModificarUsuarioClave", parametros.ToArray());
         }
     }
 }

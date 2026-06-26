@@ -51,8 +51,10 @@
     <Compile Include="ListadoProductoBE.cs" />
     <Compile Include="OrdenCompraBE.cs" />
     <Compile Include="OrdenCompraDetalleBE.cs" />
+    <Compile Include="PerfilBE.cs" />
     <Compile Include="ProductoBE.cs" />
     <Compile Include="ProveedorBE.cs" />
+    <Compile Include="UsuarioBE.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

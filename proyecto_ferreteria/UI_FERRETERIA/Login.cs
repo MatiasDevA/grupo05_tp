@@ -1,71 +1,95 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using BLL_FERRETERIA;
+using ENTIDADES.FERRETERIA;
 
 namespace UI_FERRETERIA
 {
     public partial class Login : Form
     {
+        private readonly LoginService _loginService = new LoginService();
+
         public Login()
         {
             InitializeComponent();
         }
 
-        private void btnAdmin_Click(object sender, EventArgs e)
+        private void btnIngresar_Click(object sender, EventArgs e)
         {
-            using (var form = new FormAdmin())
+            try
             {
-                form.ShowDialog(this);
+                if (string.IsNullOrWhiteSpace(txtUsuario.Text))
+                {
+                    MessageBox.Show("Ingrese el usuario", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtUsuario.Focus();
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(txtClave.Text))
+                {
+                    MessageBox.Show("Ingrese la contraseña", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtClave.Focus();
+                    return;
+                }
+
+                UsuarioBE usuario = _loginService.Login(txtUsuario.Text.Trim(), txtClave.Text);
+
+                if (usuario == null)
+                {
+                    MessageBox.Show("Usuario o contraseña incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtClave.Clear();
+                    txtClave.Focus();
+                    return;
+                }
+
+                this.Hide();
+
+                switch (usuario.IdPerfil)
+                {
+                    case 1:
+                        using (var form = new FormAdmin())
+                        {
+                            form.ShowDialog();
+                        }
+                        break;
+                    case 2:
+                        using (var form = new FormGerente())
+                        {
+                            form.ShowDialog();
+                        }
+                        break;
+                    case 3:
+                        using (var form = new GestionClientes())
+                        {
+                            form.ShowDialog();
+                        }
+                        break;
+                    case 4:
+                        using (var form = new FormEncargadoDeposito(usuario.Nombre + " " + usuario.Apellido))
+                        {
+                            form.ShowDialog();
+                        }
+                        break;
+                    default:
+                        MessageBox.Show("Perfil no reconocido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        break;
+                }
+
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        private void btnGerente_Click(object sender, EventArgs e)
+        private void txtClave_KeyDown(object sender, KeyEventArgs e)
         {
-            using (var form = new FormGerente())
+            if (e.KeyCode == Keys.Enter)
             {
-                form.ShowDialog(this);
+                btnIngresar_Click(sender, e);
             }
-        }
-
-        private void btnVendedor_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            using (var form = new GestionClientes())
-            {
-                form.ShowDialog(this);
-
-            }
-            this.Close();
-        }
-
-        private void btnEncargado_Click(object sender, EventArgs e)
-        {
-            using (var form = new FormEncargadoDeposito())
-            {
-                form.ShowDialog(this);
-            }
-        }
-
-        private void btnCliente_Click(object sender, EventArgs e)
-        {
-            GestionClientes form = new GestionClientes();
-
-            form.FormClosed += (s, args) => this.Close();
-
-            this.Hide();
-
-            form.Show();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

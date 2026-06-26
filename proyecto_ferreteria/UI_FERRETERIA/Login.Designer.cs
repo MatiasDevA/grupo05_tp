@@ -2,15 +2,8 @@
 {
     partial class Login
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -22,115 +15,136 @@
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
-            this.btnAdmin = new System.Windows.Forms.Button();
-            this.btnGerente = new System.Windows.Forms.Button();
-            this.btnVendedor = new System.Windows.Forms.Button();
-            this.btnCliente = new System.Windows.Forms.Button();
-            this.btnEncargado = new System.Windows.Forms.Button();
             this.PnlLogin = new System.Windows.Forms.Panel();
+            this.btnIngresar = new System.Windows.Forms.Button();
+            this.txtClave = new System.Windows.Forms.TextBox();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.lblClave = new System.Windows.Forms.Label();
+            this.lblUsuario = new System.Windows.Forms.Label();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.lblSubtitulo = new System.Windows.Forms.Label();
             this.PnlLogin.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnAdmin
-            // 
-            this.btnAdmin.Location = new System.Drawing.Point(655, 475);
-            this.btnAdmin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnAdmin.Name = "btnAdmin";
-            this.btnAdmin.Size = new System.Drawing.Size(104, 25);
-            this.btnAdmin.TabIndex = 0;
-            this.btnAdmin.Text = "Admin";
-            this.btnAdmin.UseVisualStyleBackColor = true;
-            this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click);
-            // 
-            // btnGerente
-            // 
-            this.btnGerente.Location = new System.Drawing.Point(655, 438);
-            this.btnGerente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnGerente.Name = "btnGerente";
-            this.btnGerente.Size = new System.Drawing.Size(104, 30);
-            this.btnGerente.TabIndex = 1;
-            this.btnGerente.Text = "Gerente";
-            this.btnGerente.UseVisualStyleBackColor = true;
-            this.btnGerente.Click += new System.EventHandler(this.btnGerente_Click);
-            // 
-            // btnVendedor
-            // 
-            this.btnVendedor.Location = new System.Drawing.Point(191, 294);
-            this.btnVendedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnVendedor.Name = "btnVendedor";
-            this.btnVendedor.Size = new System.Drawing.Size(104, 31);
-            this.btnVendedor.TabIndex = 2;
-            this.btnVendedor.Text = "Vendedor";
-            this.btnVendedor.UseVisualStyleBackColor = true;
-            this.btnVendedor.Click += new System.EventHandler(this.btnVendedor_Click);
-            // 
-            // btnCliente
-            // 
-            this.btnCliente.Location = new System.Drawing.Point(655, 513);
-            this.btnCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnCliente.Name = "btnCliente";
-            this.btnCliente.Size = new System.Drawing.Size(104, 26);
-            this.btnCliente.TabIndex = 3;
-            this.btnCliente.Text = "Cliente";
-            this.btnCliente.UseVisualStyleBackColor = true;
-            this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
-            // 
-            // btnEncargado
-            // 
-            this.btnEncargado.Location = new System.Drawing.Point(13, 508);
-            this.btnEncargado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnEncargado.Name = "btnEncargado";
-            this.btnEncargado.Size = new System.Drawing.Size(104, 31);
-            this.btnEncargado.TabIndex = 4;
-            this.btnEncargado.Text = "Encargado";
-            this.btnEncargado.UseVisualStyleBackColor = true;
-            this.btnEncargado.Click += new System.EventHandler(this.btnEncargado_Click);
             // 
             // PnlLogin
             // 
             this.PnlLogin.BackColor = System.Drawing.Color.White;
             this.PnlLogin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PnlLogin.Controls.Add(this.btnVendedor);
-            this.PnlLogin.Location = new System.Drawing.Point(168, 59);
-            this.PnlLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PnlLogin.Controls.Add(this.btnIngresar);
+            this.PnlLogin.Controls.Add(this.txtClave);
+            this.PnlLogin.Controls.Add(this.txtUsuario);
+            this.PnlLogin.Controls.Add(this.lblClave);
+            this.PnlLogin.Controls.Add(this.lblUsuario);
+            this.PnlLogin.Controls.Add(this.lblTitulo);
+            this.PnlLogin.Controls.Add(this.lblSubtitulo);
+            this.PnlLogin.Location = new System.Drawing.Point(250, 80);
             this.PnlLogin.Name = "PnlLogin";
-            this.PnlLogin.Size = new System.Drawing.Size(466, 377);
-            this.PnlLogin.TabIndex = 4;
+            this.PnlLogin.Size = new System.Drawing.Size(400, 380);
+            this.PnlLogin.TabIndex = 0;
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
+            this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(71)))));
+            this.lblTitulo.Location = new System.Drawing.Point(100, 30);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(200, 32);
+            this.lblTitulo.TabIndex = 0;
+            this.lblTitulo.Text = "Iniciar Sesión";
+            // 
+            // lblSubtitulo
+            // 
+            this.lblSubtitulo.AutoSize = true;
+            this.lblSubtitulo.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lblSubtitulo.ForeColor = System.Drawing.Color.Gray;
+            this.lblSubtitulo.Location = new System.Drawing.Point(100, 65);
+            this.lblSubtitulo.Name = "lblSubtitulo";
+            this.lblSubtitulo.Size = new System.Drawing.Size(200, 15);
+            this.lblSubtitulo.TabIndex = 1;
+            this.lblSubtitulo.Text = "Ferreteria Industrial";
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lblUsuario.Location = new System.Drawing.Point(50, 110);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(65, 19);
+            this.lblUsuario.TabIndex = 2;
+            this.lblUsuario.Text = "Usuario:";
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtUsuario.Location = new System.Drawing.Point(50, 135);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(300, 30);
+            this.txtUsuario.TabIndex = 3;
+            // 
+            // lblClave
+            // 
+            this.lblClave.AutoSize = true;
+            this.lblClave.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lblClave.Location = new System.Drawing.Point(50, 180);
+            this.lblClave.Name = "lblClave";
+            this.lblClave.Size = new System.Drawing.Size(89, 19);
+            this.lblClave.TabIndex = 4;
+            this.lblClave.Text = "Contraseña:";
+            // 
+            // txtClave
+            // 
+            this.txtClave.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtClave.Location = new System.Drawing.Point(50, 205);
+            this.txtClave.Name = "txtClave";
+            this.txtClave.PasswordChar = '*';
+            this.txtClave.Size = new System.Drawing.Size(300, 30);
+            this.txtClave.TabIndex = 5;
+            this.txtClave.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtClave_KeyDown);
+            // 
+            // btnIngresar
+            // 
+            this.btnIngresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(71)))));
+            this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIngresar.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnIngresar.ForeColor = System.Drawing.Color.White;
+            this.btnIngresar.Location = new System.Drawing.Point(50, 265);
+            this.btnIngresar.Name = "btnIngresar";
+            this.btnIngresar.Size = new System.Drawing.Size(300, 40);
+            this.btnIngresar.TabIndex = 6;
+            this.btnIngresar.Text = "INGRESAR";
+            this.btnIngresar.UseVisualStyleBackColor = false;
+            this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(71)))));
-            this.ClientSize = new System.Drawing.Size(797, 554);
+            this.ClientSize = new System.Drawing.Size(900, 550);
             this.Controls.Add(this.PnlLogin);
-            this.Controls.Add(this.btnCliente);
-            this.Controls.Add(this.btnGerente);
-            this.Controls.Add(this.btnAdmin);
-            this.Controls.Add(this.btnEncargado);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Login";
-            this.Text = "Pantalla Principal";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Ferreteria Industrial - Login";
             this.PnlLogin.ResumeLayout(false);
+            this.PnlLogin.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button btnAdmin;
-        private System.Windows.Forms.Button btnGerente;
-        private System.Windows.Forms.Button btnVendedor;
-        private System.Windows.Forms.Button btnCliente;
-        private System.Windows.Forms.Button btnEncargado;
         private System.Windows.Forms.Panel PnlLogin;
+        private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Label lblSubtitulo;
+        private System.Windows.Forms.Label lblUsuario;
+        private System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.Label lblClave;
+        private System.Windows.Forms.TextBox txtClave;
+        private System.Windows.Forms.Button btnIngresar;
     }
 }
-
